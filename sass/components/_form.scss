@@ -1,0 +1,38 @@
+.news-letter-form {
+  display: block;
+  padding: 3rem 0 0;
+  max-width: 980px;
+  margin: 0 auto;
+
+  #emails {
+    background: $color-choco;
+    border: none;
+    padding: 15px 20px;
+    font-size: 20px;
+    margin-right: 5px;
+    width: 50%;
+
+    @include responsive(phone-landscape){
+      width: 100%;
+      margin: 0 0 10px;
+    }
+  }
+
+  input[type="submit"] {
+    background: $color-gold;
+    color: $color-choco;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: $monstserrat-font;
+    cursor: pointer;
+    padding: 14px 25px;
+    width: 20%;
+
+    @include responsive(phone-landscape){
+      width: 100%;
+    }
+  }
+}

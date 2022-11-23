@@ -1,0 +1,123 @@
+.watch-design {
+
+  .row-with-columns {
+
+    @include responsive(tablet-portrait){
+      @include flex-wrap;
+      flex-direction: inherit;
+    }
+  }
+}
+
+.watchModel {
+  text-align: center;
+  position: relative;
+  padding-top: 40%;
+  overflow: hidden;
+
+  @include responsive(tablet-portrait){
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 60%;
+  }
+
+  @include responsive(phone-portrait){
+    padding-top: 100%;
+  }
+
+  &__img {
+    max-width: 355px;
+    margin: 0 auto;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    @include  image-object-fit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include transition( all 0.3s ease );
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+
+.imageBox {
+
+  .watch-design & {
+    @include responsive(tablet-portrait){
+      width: 45% !important;
+      order: 2;
+      padding-top: 1rem;
+    }
+  }
+
+  &__thumbnail {
+    position: relative;
+    overflow: hidden;
+    height: 270px;
+    margin-bottom: 25px;
+
+    @include responsive(tablet-portrait){
+      height: 300px;
+    }
+  }
+
+  &__image {
+    @include image-object-fit;
+  }
+
+  &__title {
+    font-size: 16px;
+    color: $color-gold;
+  }
+
+  &__content {
+    font-size: 14px;
+    line-height: 1.8em;
+    color: $color-grey;
+  }
+
+  &__textContent {
+
+    @include responsive(tablet-portrait){
+      display: none;
+    }
+  }
+
+  &__innerItem {
+    display: flex;
+    cursor: pointer;
+    padding: 2rem 1rem;
+    border-radius: 5px;
+
+    @include responsive(phone-portrait){
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &.active {
+      .watch-design & {
+        background-color: $color-dark;
+      }
+    } 
+
+    &:nth-child(2) {
+      border-bottom: 1px solid $color-choco-light;
+      border-top: 1px solid $color-choco-light;
+    }
+  }
+
+  &__icon {
+    margin-right: 30px;
+
+    @include responsive(phone-portrait){
+      margin: 0 0 20px;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.banner-carousel {
+
+  .carousel-cell {
+    width: 100%;
+  }
+
+  .cell-inner {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: block;
+
+    @include responsive(tablet-landscape){
+      height: 700px;
+    }
+
+    @include responsive(phone-landscape){
+      height: 600px;
+    }
+  }
+  
+  .slider-img {
+    top: 0;
+    left: 0;
+    position: absolute;
+    @include image-object-fit;
+  }
+}

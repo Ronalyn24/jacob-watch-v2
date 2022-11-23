@@ -1,0 +1,73 @@
+.footer {
+  padding: 4rem 0 0;
+
+  &__widgets {
+    margin-bottom: 4rem;
+
+    @include responsive(tablet-portrait){
+      margin-bottom: 2rem;
+      width: 50% !important;
+    }
+  }
+
+  .small-title {
+    color: $color-gold;
+    margin: 0 0 20px;
+  }
+
+  &__ctner {
+    justify-content: space-between;
+
+    @include responsive(tablet-portrait){
+      @include flex-wrap;
+      flex-direction: inherit;
+    }
+  }
+
+  &__menu-item {
+    margin-bottom: 10px;
+
+    a {
+      font-size: 14px;
+      color: $color-grey;
+      @include transition( .2s ease-in-out );
+
+        @include responsive(phone-landscape){
+          span {
+            word-break: break-word;
+        }
+      }
+
+      &:hover {
+        color: $color-gold;
+      }
+    }
+  }
+ 
+  &__menu {
+
+    &--socialMedia, 
+    &--shopInfo {
+
+      .footer__menu-item {
+        padding-left: 33px;
+        position: relative;
+
+        i {
+          position: absolute;
+          left: 0;
+          top: 5px;
+          color: $color-gold;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid $color-choco-light;
+    color: $color-grey;
+    font-size: 14px;
+  }
+}

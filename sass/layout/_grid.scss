@@ -1,0 +1,137 @@
+// Container Positions
+
+.content-top-left {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.content-top-center {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.content-top-right {
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.content-middle-left {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.content-middle-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.content-middle-right {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.content-bottom-left {
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.content-bottom-center {
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.content-bottom-right {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+
+// TEXT ALIGN
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+
+.row-headline {
+  z-index: 9;
+  padding: 0 0 3rem;
+}
+
+
+
+// GRID
+
+section {
+  padding: 5rem 0;
+}
+
+.row, 
+.row-with-columns {
+  position: relative;
+  width: 90%;
+  max-width: 1320px;
+  margin: 0 auto;
+
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+
+[class^="col-"]:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.row-with-columns {
+  display: flex;
+  flex-direction: row; 
+  
+  @include responsive(tablet-portrait){
+    flex-direction: column;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .img-icon {
+    width: 35px;
+  }
+
+  .col-1-of-2 {
+      width: calc((100% - 0rem) / 2);       
+  }
+
+  .col-1-of-3 {
+      width: calc((100% - 2 * 2rem) / 3);
+
+      @include responsive(tablet-portrait){
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto 35px;
+      }
+  }
+
+  .col-2-of-3 {
+      width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+  }
+
+  .col-1-of-4 {
+      width: calc((100% - 3 * 6rem) / 4);
+  }
+
+  .col-2-of-4 {
+      width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
+  }
+
+  .col-3-of-4 {
+      width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+  }
+}
