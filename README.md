@@ -1,5 +1,5 @@
 # jacob-watch
-sample HTML & SCSS code for the Jacob Watch, and I used the Flickity plugin for the banner slider. I explored this plugin for this purpose and also to explore the webpack for code optimization
+This project showcases sample HTML & SCSS code for the Jacob Watch website. I've integrated the Flickity plugin to create an engaging banner slider. Through this project, I delved into utilizing the Flickity plugin for its functionality and aesthetic appeal. Additionally, I utilized webpack to optimize the code for better performance and efficiency.
 
 
 
